@@ -1,6 +1,6 @@
 # ZBAZAAR SOLUTIONS PRIVATE LIMITED – OneReachAll Official Website
 
-**Tagline**: Global Reach. Trusted Partnerships.  
+**Tagline**: Connected Conversations. One Reach.  
 **Indian Helpline**: +91 77458 43216  
 **Email**: None displayed on website (as per enterprise privacy policy)  
 **Live Local Preview**: [http://localhost:8080/](http://localhost:8080/)
@@ -24,7 +24,7 @@ Alfia/
 │   │   └── main.js         # Interactive RCS preview, 1-tap OTP copy, form handler
 │   └── images/
 │       ├── logo.jpg        # Official Brand Logo
-│       └── banner.png      # Global Network Banner (High-Res)
+│       └── banner.png      # Official Network Banner (High-Res)
 └── README.md
 ```
 
