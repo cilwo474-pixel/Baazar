@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgRadial" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#0f264e"/>
+      <stop offset="55%" stop-color="#071226"/>
+      <stop offset="100%" stop-color="#030814"/>
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(56, 189, 248, 0.05)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Glowing Filters -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Gradients for Cards & Accents -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(15, 29, 56, 0.85)"/>
+      <stop offset="100%" stop-color="rgba(8, 17, 36, 0.95)"/>
+    </linearGradient>
+    <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="lineGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="60%" stop-color="#06b6d4" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="accentAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="720" fill="url(#bgRadial)"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="280" cy="220" r="180" fill="#0284c7" opacity="0.12" filter="url(#cyanGlow)"/>
+  <circle cx="920" cy="380" r="220" fill="#3b82f6" opacity="0.1" filter="url(#cyanGlow)"/>
+  <circle cx="600" cy="580" r="150" fill="#7c3aed" opacity="0.08"/>
+
+  <!-- World Topology Map Curves & Mesh Nodes -->
+  <g opacity="0.25" stroke="#38bdf8" stroke-width="1" fill="none">
+    <!-- Latitude & Longitude Geodesic Rings -->
+    <ellipse cx="600" cy="340" rx="420" ry="190" stroke-dasharray="6 6"/>
+    <ellipse cx="600" cy="340" rx="320" ry="140" stroke-dasharray="4 4"/>
+    <ellipse cx="600" cy="340" rx="200" ry="90"/>
+    <path d="M 180 340 Q 600 150 1020 340"/>
+    <path d="M 180 340 Q 600 530 1020 340"/>
+    <line x1="600" y1="150" x2="600" y2="530" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Active Telecom Fiber Arcs -->
+  <path d="M 280 420 Q 420 180 620 280 T 940 240" fill="none" stroke="url(#lineGrad1)" stroke-width="3" filter="url(#cyanGlow)"/>
+  <path d="M 220 260 Q 500 120 720 380 T 1000 460" fill="none" stroke="url(#lineGrad2)" stroke-width="2.5" stroke-dasharray="12 4"/>
+  <path d="M 380 500 Q 620 400 860 300" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.6"/>
+
+  <!-- Major Telecom Hub Ping Markers -->
+  <!-- New Delhi NOC Hub (Primary) -->
+  <g transform="translate(680, 310)">
+    <circle cx="0" cy="0" r="22" fill="#0284c7" opacity="0.2" filter="url(#cyanGlow)"/>
+    <circle cx="0" cy="0" r="12" fill="#0284c7" opacity="0.4"/>
+    <circle cx="0" cy="0" r="6" fill="#38bdf8"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+    <rect x="14" y="-12" width="115" height="24" rx="6" fill="rgba(10, 25, 49, 0.9)" stroke="#0284c7" stroke-width="1"/>
+    <text x="22" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#ffffff">DELHI NOC HUB</text>
+  </g>
+
+  <!-- Mumbai Interconnect Hub -->
+  <g transform="translate(630, 360)">
+    <circle cx="0" cy="0" r="10" fill="#38bdf8" opacity="0.4"/>
+    <circle cx="0" cy="0" r="5" fill="#06b6d4"/>
+    <rect x="-100" y="-12" width="90" height="22" rx="5" fill="rgba(10, 25, 49, 0.85)" stroke="rgba(56, 189, 248, 0.5)" stroke-width="0.8"/>
+    <text x="-92" y="3" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#38bdf8">MUMBAI IX</text>
+  </g>
+
+  <!-- Singapore Hub -->
+  <g transform="translate(830, 420)">
+    <circle cx="0" cy="0" r="8" fill="#10b981" opacity="0.5"/>
+    <circle cx="0" cy="0" r="4" fill="#34d399"/>
+    <text x="12" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#a7f3d0">SINGAPORE</text>
+  </g>
+
+  <!-- London Hub -->
+  <g transform="translate(420, 240)">
+    <circle cx="0" cy="0" r="8" fill="#818cf8" opacity="0.5"/>
+    <circle cx="0" cy="0" r="4" fill="#a5b4fc"/>
+    <text x="-65" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#c7d2fe">LONDON</text>
+  </g>
+
+  <!-- New York Hub -->
+  <g transform="translate(240, 260)">
+    <circle cx="0" cy="0" r="9" fill="#38bdf8" opacity="0.5"/>
+    <circle cx="0" cy="0" r="4" fill="#38bdf8"/>
+    <text x="-70" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#bae6fd">NEW YORK</text>
+  </g>
+
+  <!-- Dubai Hub -->
+  <g transform="translate(540, 310)">
+    <circle cx="0" cy="0" r="8" fill="#fbbf24" opacity="0.5"/>
+    <circle cx="0" cy="0" r="4" fill="#f59e0b"/>
+    <text x="-48" y="-10" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#fde68a">DUBAI</text>
+  </g>
+
+  <!-- ========================================================
+       TOP STATUS HUD BAR
+       ======================================================== -->
+  <g transform="translate(60, 40)">
+    <rect width="1080" height="52" rx="14" fill="rgba(10, 25, 49, 0.85)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.2"/>
+    
+    <!-- Status Dot -->
+    <circle cx="30" cy="26" r="6" fill="#10b981" filter="url(#cyanGlow)"/>
+    <circle cx="30" cy="26" r="3" fill="#ffffff"/>
+    
+    <!-- Status Text -->
+    <text x="48" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.5">ONEREACHALL TIER-1 GLOBAL TELECOM PLATFORM</text>
+    <rect x="490" y="15" width="130" height="22" rx="6" fill="rgba(2, 132, 199, 0.25)" stroke="#0284c7" stroke-width="0.8"/>
+    <text x="502" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#38bdf8">CARRIER BIND LIVE</text>
+
+    <!-- Metrics on Right -->
+    <text x="860" y="31" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#94a3b8">TPS: <tspan fill="#38bdf8" font-weight="800">5,840/s</tspan>  |  SLA: <tspan fill="#34d399" font-weight="800">99.98%</tspan>  |  LATENCY: <tspan fill="#fbbf24" font-weight="800">&lt;1.2s</tspan></text>
+  </g>
+
+  <!-- ========================================================
+       FLOATING GLASSMORPHIC TELEMETRY CARDS
+       ======================================================== -->
+
+  <!-- CARD 1: LEFT - RCS Verified Business Messaging -->
+  <g transform="translate(60, 130)">
+    <rect width="320" height="420" rx="20" fill="url(#cardGrad)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" filter="url(#cyanGlow)"/>
+    
+    <!-- Card Header -->
+    <rect x="20" y="20" width="40" height="40" rx="10" fill="rgba(2, 132, 199, 0.2)"/>
+    <path d="M 32 40 L 40 48 L 48 32" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <text x="70" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" fill="#ffffff">Verified RCS Messaging</text>
+    <text x="70" y="52" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#38bdf8">Google RBM &amp; Carrier Verified</text>
+    
+    <line x1="20" y1="75" x2="300" y2="75" stroke="rgba(255, 255, 255, 0.08)"/>
+
+    <!-- Simulated RCS Smartphone Card -->
+    <g transform="translate(20, 95)">
+      <rect width="280" height="230" rx="14" fill="#050e1f" stroke="rgba(255, 255, 255, 0.1)"/>
+      
+      <!-- Sender Header with Green Verified Check -->
+      <circle cx="28" cy="26" r="14" fill="#0284c7"/>
+      <text x="23" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#ffffff">O</text>
+      <text x="50" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff">OneReachAll Alerts</text>
+      <circle cx="170" cy="21" r="6" fill="#10b981"/>
+      <path d="M 167 21 L 169 23 L 173 19" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+      <text x="50" y="38" font-family="'Inter', sans-serif" font-size="9" fill="#94a3b8">Verified Business</text>
+
+      <!-- RCS Rich Card Banner -->
+      <rect x="15" y="52" width="250" height="85" rx="8" fill="url(#lineGrad1)"/>
+      <text x="26" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#ffffff">Instant 2FA One-Time Pass</text>
+      <text x="26" y="103" font-family="'Inter', sans-serif" font-size="10" fill="#e0f2fe">Auto-authenticated carrier cryptographic token</text>
+      <rect x="26" y="112" width="85" height="18" rx="4" fill="#ffffff"/>
+      <text x="35" y="125" font-family="'Courier New', monospace" font-size="11" font-weight="800" fill="#0284c7">934 - 182</text>
+
+      <!-- RCS Quick Action Buttons -->
+      <rect x="15" y="150" width="250" height="30" rx="8" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1"/>
+      <text x="80" y="170" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#ffffff">📋 1-Tap Copy Code</text>
+
+      <rect x="15" y="188" width="250" height="30" rx="8" fill="rgba(255,255,255,0.06)"/>
+      <text x="92" y="208" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#94a3b8">🔒 View Security Info</text>
+    </g>
+
+    <!-- Bottom Stat Pill -->
+    <g transform="translate(20, 345)">
+      <rect width="280" height="52" rx="10" fill="rgba(16, 185, 129, 0.12)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1"/>
+      <text x="16" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#34d399">✓ 3.8x HIGHER CONVERSIONS</text>
+      <text x="16" y="40" font-family="'Inter', sans-serif" font-size="10" fill="#cbd5e1">Over standard traditional plain-text SMS</text>
+    </g>
+  </g>
+
+  <!-- CARD 2: RIGHT - Telecom & SMPP Gateway Performance -->
+  <g transform="translate(820, 130)">
+    <rect width="320" height="420" rx="20" fill="url(#cardGrad)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" filter="url(#cyanGlow)"/>
+
+    <text x="25" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800" fill="#ffffff">Carrier Core Telemetry</text>
+    <text x="25" y="58" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#38bdf8">Direct SMPP v3.4 &amp; REST Bindings</text>
+    <line x1="20" y1="75" x2="300" y2="75" stroke="rgba(255, 255, 255, 0.08)"/>
+
+    <!-- Metrics List -->
+    <!-- Metric 1: Latency -->
+    <g transform="translate(20, 95)">
+      <rect width="280" height="65" rx="10" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)"/>
+      <text x="16" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Average OTP Latency</text>
+      <text x="16" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#38bdf8">1.18 sec</text>
+      <rect x="180" y="24" width="85" height="24" rx="6" fill="rgba(56, 189, 248, 0.15)"/>
+      <text x="194" y="40" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#38bdf8">LIGHTNING</text>
+    </g>
+
+    <!-- Metric 2: Uptime SLA -->
+    <g transform="translate(20, 175)">
+      <rect width="280" height="65" rx="10" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)"/>
+      <text x="16" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Carrier Service Availability</text>
+      <text x="16" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#34d399">99.985%</text>
+      <rect x="180" y="24" width="85" height="24" rx="6" fill="rgba(16, 185, 129, 0.15)"/>
+      <text x="194" y="40" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#34d399">FAIL-SAFE</text>
+    </g>
+
+    <!-- Metric 3: Multi-Carrier Interconnect -->
+    <g transform="translate(20, 255)">
+      <rect width="280" height="65" rx="10" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.08)"/>
+      <text x="16" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Global Telecom Interconnects</text>
+      <text x="16" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="#fbbf24">190+ Countries</text>
+      <rect x="200" y="24" width="65" height="24" rx="6" fill="rgba(245, 158, 11, 0.15)"/>
+      <text x="214" y="40" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#fbbf24">TIER-1</text>
+    </g>
+
+    <!-- Regulatory Stamp -->
+    <g transform="translate(20, 335)">
+      <rect width="280" height="62" rx="10" fill="rgba(2, 132, 199, 0.1)" stroke="rgba(2, 132, 199, 0.3)"/>
+      <text x="16" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#ffffff">🛡️ TRAI DLT &amp; DPDP ACT COMPLIANT</text>
+      <text x="16" y="46" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">Full PE/TM Template Scrubbing and Consent Governance</text>
+    </g>
+  </g>
+
+  <!-- ========================================================
+       CENTER CALLOUT: POWERED BY ZBAZAAR SOLUTIONS
+       ======================================================== -->
+  <g transform="translate(420, 500)">
+    <rect width="360" height="70" rx="16" fill="rgba(10, 25, 49, 0.95)" stroke="url(#accentCyan)" stroke-width="1.5" filter="url(#cyanGlow)"/>
+    <text x="180" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="1">OPERATED &amp; GOVERNED BY</text>
+    <text x="180" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">ZBAZAAR SOLUTIONS PRIVATE LIMITED</text>
+  </g>
+
+  <!-- BOTTOM STATUS LINE -->
+  <g transform="translate(60, 640)">
+    <rect width="1080" height="42" rx="10" fill="rgba(10, 25, 49, 0.6)" stroke="rgba(255, 255, 255, 0.06)"/>
+    <text x="30" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#64748b">
+      CORE PROTOCOLS: <tspan fill="#94a3b8">SMPP v3.4</tspan> • <tspan fill="#94a3b8">HTTP REST API</tspan> • <tspan fill="#94a3b8">Google RBM</tspan> • <tspan fill="#94a3b8">Meta WhatsApp Cloud</tspan> • <tspan fill="#94a3b8">SS7 / Sigtran Direct Routes</tspan>
+    </text>
+    <text x="960" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#34d399">● ALL SYSTEMS NORMAL</text>
+  </g>
+</svg>
